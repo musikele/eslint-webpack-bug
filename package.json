@@ -12,8 +12,7 @@
   },
   "scripts": {
     "serve": "npx webpack serve -c config/webpack.serve.js",
-    "build:single": "npm run clean && MINIFY=1 webpack --config config/webpack.prod.js --bail",
-    "lint": "npx eslint tests/ config/ src/"
+    "lint": "npx eslint ."
   },
   "devDependencies": {
     "@babel/cli": "~7.16.0",
