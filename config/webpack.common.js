@@ -24,11 +24,9 @@ module.exports = {
       eslintPath: 'eslint/use-at-your-own-risk',
       overrideConfigFile: true,
       overrideConfig: eslintConfig,
-      // need to explicitly call the formatter because ESLint formatter is
-      // loaded dynamically, using ESM syntax, and we are using CJS for webpack.
-      //   formatter: require(
-      //     rootDir + '/node_modules/eslint/lib/cli-engine/formatters/stylish'
-      //   ),
+      formatter: require(
+        rootDir + '/node_modules/eslint/lib/cli-engine/formatters/stylish'
+      ),
     }),
   ],
   module: {
